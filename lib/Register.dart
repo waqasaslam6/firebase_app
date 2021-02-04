@@ -3,12 +3,12 @@ import 'package:firebase_app/Login.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class Home extends StatefulWidget {
+class Register extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _HomeState extends State<Home> {
+class _RegisterState extends State<Register> {
 
   TextEditingController emailController =  new TextEditingController();
   TextEditingController passController = new TextEditingController();
@@ -155,9 +155,7 @@ class _HomeState extends State<Home> {
                 FlatButton(
                   onPressed: (){
 
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) =>Login()
-                    ));
+                    Navigator.pop(context);
                   },
                   child: Text("Already Registered? Login"),
 
